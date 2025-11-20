@@ -1,0 +1,15 @@
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+ORACLE_DB_USERNAME = os.getenv("ORACLE_DB_USERNAME")
+ORACLE_DB_PASSWORD = os.getenv("ORACLE_DB_PASSWORD")
+ATTENDANCE_TABLE_NAME = os.getenv("ATTENDANCE_TABLE_NAME")
+ORK_BASE_URL = os.getenv("ORK_BASE_URL")
+ORACLE_HOST = os.getenv("ORACLE_HOST")
+ORACLE_PORT = os.getenv("ORACLE_PORT")
+ORACLE_SERVICE = os.getenv("ORACLE_SERVICE")
+MACES_SECRET_KEY = os.getenv("MACES_SECRET_KEY")
+APP_IDENTIFIER = os.getenv("APP_IDENTIFIER")
+VALID_TABLE_NAMES = os.getenv("VALID_TABLE_NAMES").split(",")

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jacquard+12&family=Jacquard+24&family=New+Rocker&family=UnifrakturMaguntia&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="{{ url_for('static', filename='js/utils.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/maces.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+
+  
+</head>
+
+<body>
+    <div id="topper">
+        <h1>M.A.C.E.S</h1>
+        <p>Malik's Automated Credit Entry System</p>
+    </div>
+    <main id="content">
+        <div id="loginFormDiv" class="card" style="display:block;">
+            <h2>Halt! Who goes there?</h2>
+            <form id="loginForm">
+                <div class="box-label">
+                    <label>Username: <input id="username" required></label><br>
+                    <label>Password: <input id="password" type="password" required></label>
+                </div>
+                <br>
+                <button type="submit">Login</button>
+        </div>
+        </form>
+        </div>
+
+    
+        <div id="parkDateSelection" class="card" style="display:none;">
+            <h2>Officer Tools</h2>
+            <form id="dateForm">
+                <div class="box-label">
+                    <label>Select Park Day: <input type="date" id="parkDate" required></label><br>
+                </div>
+                <br>
+                <button type="submit">Generate URL</button>
+
+            </form>
+
+        </div>
+
+        <div id="generatedUrl" style="margin-top: 10px;"></div>
+
+        <div id="classSection" class="card" style="display:none;">
+            <h2>Sign In</h2>
+            <form id="classForm">
+                <div class="box-label">
+
+                    <label>Select Class
+
+                        <select id="classSelect" required>
+                            <option value=''>-select one-</option>
+                        </select>
+                    </label>
+                </div>
+
+                <br>
+                <div class="radioSelect">
+                    <span>Attending in person?</span>
+                    <input type="radio" id="yes" name="attending" value="yes" required>
+                    <label for="yes">yes</label>
+                    <input type="radio" id="no" name="attending" value="no" required>
+                    <label for="no">no</label>
+                </div>
+
+                <br>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+        <div id="adminOptions" class="card" style="display:none;">
+            <h2>Admin Options</h2>
+            <form id="creditSubmissionForm">
+
+                <fieldset>
+                    <legend>In-Person Credits</legend>
+                    <div class="box-label">
+                        <label>Local Player<input type="number" min="1" required data-label="inPersonLocal"></label>
+                        <label>Out Of Park<input type="number" min="1" required data-label="inPersonOutPark"></label>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Online Credits</legend>
+                    <div class="box-label">
+                        <label>Local Player<input type="number" min="1" required data-label="onlineLocal"></label>
+                        <label>Out Of Park<input type="number" min="1" required data-label="onlineOutPark"></label>
+                    </div>
+                </fieldset>
+
+                <button type="submit">Send Credits To ORK</button>
+            </form>
+        </div>
+    </main>
+</body>
+
+</html>

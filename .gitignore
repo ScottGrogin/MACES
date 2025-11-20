@@ -1,0 +1,5 @@
+.vscode
+__pycache__/
+TODO.MD
+logs.txt
+.env
