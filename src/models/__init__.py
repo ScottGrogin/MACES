@@ -1,4 +1,4 @@
-from pydantic import BaseModel, SecretStr
+from pydantic import BaseModel
 from datetime import date
 
 
@@ -29,4 +29,4 @@ class AttendanceSubmission(AttendanceGet):
 
 class LoginInfo(BaseModel):
     username: str
-    password: SecretStr
+    password: str
